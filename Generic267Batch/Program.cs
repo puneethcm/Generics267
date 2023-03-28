@@ -6,7 +6,7 @@ internal class Program
     {
         Console.WriteLine("Welcome to Generics");
         Console.WriteLine("\nChoose any one options");
-        Console.WriteLine("\n1:Delete Array Element");
+        Console.WriteLine("\n1:Delete Array Element\n2:Delete Array element By Generics Method concept");
         int options = Convert.ToInt32(Console.ReadLine());
 
         switch (options)
@@ -60,6 +60,28 @@ internal class Program
                         DeleteArrayClass.DeletedCharArrayMethod(charArr, charDelete);
                         break;
                 }
+                break;
+
+            case 2:
+                char[] charArray = { 'A','B','C','D' };
+                int[] intArray = { 10, 20, 30, 50, 60 };
+                double[] doubleArray = { 20.5, 30.6, 45.9, 56.7, 10.9 };
+
+                DeleteArrayClass.Display<char>(charArray);
+                Console.WriteLine("\nPick one element you want to delete");
+                var deleteArray = Convert.ToChar(Console.ReadLine());
+                DeleteArrayClass.DeleteGenericMethod<char>(charArray, deleteArray);
+                Console.WriteLine("--------------------------------------------");
+                DeleteArrayClass.Display<int>(intArray);
+                Console.WriteLine("\nPick one element you want to delete");
+                var deleteIntArray = Convert.ToInt32(Console.ReadLine());
+                DeleteArrayClass.DeleteGenericMethod<int>(intArray, deleteIntArray);
+                Console.WriteLine("--------------------------------------------");
+                DeleteArrayClass.Display<int>(intArray);
+                Console.WriteLine("\nPick one element you want to delete");
+                var deleteDoubleArray = Convert.ToInt32(Console.ReadLine());
+                DeleteArrayClass.DeleteGenericMethod<double>(doubleArray, deleteDoubleArray);
+
                 break;
 
             default:

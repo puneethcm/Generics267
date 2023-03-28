@@ -1,4 +1,6 @@
 ﻿using System;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+
 namespace Generic267Batch
 {
 	public class DeleteArrayClass
@@ -58,6 +60,36 @@ namespace Generic267Batch
             {
                 Console.Write(j + " ");
             }
+        }
+
+        public static void DeleteGenericMethod<T>(T[] array, T deleteArray)
+        {
+            int k = 0;
+            T[] result = new T[array.Length - 1];
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (!deleteArray.Equals(array[i]))
+                {
+
+                    result[k] = array[i];
+                    k++;
+                }
+            }
+            foreach (T j in result)
+            {
+                Console.Write(j + " ");
+            }
+        }
+
+        public static void Display<T>(T[] array)
+        {
+            Console.WriteLine("\nDisplaying values");
+            foreach (T elements in array)
+            {
+                Console.Write(elements + " ");
+            }
+
         }
     }
 }
