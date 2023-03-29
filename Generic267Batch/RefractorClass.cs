@@ -1,9 +1,9 @@
 ﻿using System;
 namespace Generic267Batch
 {
-	public class RefractorMethod
+	public class RefractorClass
 	{
-		public RefractorMethod()
+		public RefractorClass()
 		{
 		}
 	}
