@@ -9,7 +9,8 @@ internal class Program
         double[] doubleArray = { 20.5, 30.6, 45.9, 56.7, 10.9 };
         Console.WriteLine("Welcome to Generics");
         Console.WriteLine("\nChoose any one options");
-        Console.WriteLine("\n1:Delete Array Element\n2:Delete Array element By Generics Method concept\n3:Generic Class");
+        Console.WriteLine("\n1:Delete Array Element\n2:Delete Array element By Generics Method concept\n3:Generic Class" +
+            "\n4:Find Integer Minimum values\n5:Find Float Minimum Values\n6:Find String Minimum Values");
         int options = Convert.ToInt32(Console.ReadLine());
 
         switch (options)
@@ -105,6 +106,22 @@ internal class Program
                 GenericClass<char> charObj = new GenericClass<char>(charArray);
                 charObj.DeleteArray(charArray, charDelete2);
 
+                break;
+            case 4:
+                Console.WriteLine("Enter 3 Integer Values");
+                int first = Convert.ToInt32(Console.ReadLine());
+                int second = Convert.ToInt32(Console.ReadLine());
+                int third = Convert.ToInt32(Console.ReadLine());
+                int intMinimum = FindIntegerMinmum.FindMinValues(first,second,third);
+                Console.WriteLine("The minimum Value is: " + intMinimum);
+                break;
+            case 5:
+                Console.WriteLine("Enter 3 Integer Values");
+                float floatFirst = Convert.ToInt32(Console.ReadLine());
+                float floatSecond = Convert.ToInt32(Console.ReadLine());
+                float floatThird = Convert.ToInt32(Console.ReadLine());
+                float floatMinimum = FindIntegerMinmum.FindFloatMinValues(floatFirst, floatSecond, floatThird);
+                Console.WriteLine("The minimum Value is: " + floatMinimum);
                 break;
 
             default:
