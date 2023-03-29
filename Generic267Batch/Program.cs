@@ -10,7 +10,7 @@ internal class Program
         Console.WriteLine("Welcome to Generics");
         Console.WriteLine("\nChoose any one options");
         Console.WriteLine("\n1:Delete Array Element\n2:Delete Array element By Generics Method concept\n3:Generic Class" +
-            "\n4:Find Integer Minimum values\n5:Find Float Minimum Values\n6:Find String Minimum Values");
+            "\n4:Find Integer Minimum values\n5:Find Float Minimum Values\n6:Find String Minimum Values\n7:Refractor Generic Method\n8:Refractor Generic Class");
         int options = Convert.ToInt32(Console.ReadLine());
 
         switch (options)
@@ -109,10 +109,10 @@ internal class Program
                 break;
             case 4:
                 Console.WriteLine("Enter 3 Integer Values");
-                int first = Convert.ToInt32(Console.ReadLine());
-                int second = Convert.ToInt32(Console.ReadLine());
-                int third = Convert.ToInt32(Console.ReadLine());
-                int intMinimum = FindIntegerMinmum.FindMinValues(first,second,third);
+                int intFirst = Convert.ToInt32(Console.ReadLine());
+                int intSecond = Convert.ToInt32(Console.ReadLine());
+                int intThird = Convert.ToInt32(Console.ReadLine());
+                int intMinimum = FindIntegerMinmum.FindMinValues(intFirst, intSecond, intThird);
                 Console.WriteLine("The minimum Value is: " + intMinimum);
                 break;
             case 5:
@@ -130,6 +130,28 @@ internal class Program
                 string strThird = Console.ReadLine();
                 string strMinimum = FindIntegerMinmum.FindStringMinValues(strFirst, strSecond, strThird);
                 Console.WriteLine("The minimum Value is: " + strMinimum);
+                break;
+            case 7:
+                //Console.WriteLine("Enter 3 Integer Values");
+                //int first = Convert.ToInt32(Console.ReadLine());
+                //int second = Convert.ToInt32(Console.ReadLine());
+                //int third = Convert.ToInt32(Console.ReadLine());
+                //var minimum = RefractodMethod<int>.FindMinValues(first, second, third);
+                //Console.WriteLine("The minimum Value is: " + minimum);
+                Console.WriteLine("--------------------------------------------");
+                Console.WriteLine("Enter 3 Float Values");
+                float fFirst = float.Parse(Console.ReadLine());
+                float fSecond = float.Parse(Console.ReadLine());
+                float fthird = float.Parse(Console.ReadLine());
+                var fminimum = RefractodMethod<float>.FindMinValues(fFirst, fSecond, fthird);
+                Console.WriteLine("The minimum Value is: " + fminimum);
+                Console.WriteLine("--------------------------------------------");
+                Console.WriteLine("Enter 3 String Values");
+                string sFirst = Console.ReadLine();
+                string sSecond = Console.ReadLine();
+                string sThird = Console.ReadLine();
+                var sMinimum = RefractodMethod<string>.FindMinValues(sFirst, sSecond, sThird);
+                Console.WriteLine("The minimum Value is: " + sMinimum);
                 break;
 
             default:
