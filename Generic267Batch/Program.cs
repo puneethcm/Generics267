@@ -123,6 +123,14 @@ internal class Program
                 float floatMinimum = FindIntegerMinmum.FindFloatMinValues(floatFirst, floatSecond, floatThird);
                 Console.WriteLine("The minimum Value is: " + floatMinimum);
                 break;
+            case 6:
+                Console.WriteLine("Enter 3 Integer Values");
+                string strFirst = Console.ReadLine();
+                string strSecond = Console.ReadLine();
+                string strThird = Console.ReadLine();
+                string strMinimum = FindIntegerMinmum.FindStringMinValues(strFirst, strSecond, strThird);
+                Console.WriteLine("The minimum Value is: " + strMinimum);
+                break;
 
             default:
                 Console.WriteLine("Please choose the any one options");
