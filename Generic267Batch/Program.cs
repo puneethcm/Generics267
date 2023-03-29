@@ -132,12 +132,12 @@ internal class Program
                 Console.WriteLine("The minimum Value is: " + strMinimum);
                 break;
             case 7:
-                //Console.WriteLine("Enter 3 Integer Values");
-                //int first = Convert.ToInt32(Console.ReadLine());
-                //int second = Convert.ToInt32(Console.ReadLine());
-                //int third = Convert.ToInt32(Console.ReadLine());
-                //var minimum = RefractodMethod<int>.FindMinValues(first, second, third);
-                //Console.WriteLine("The minimum Value is: " + minimum);
+                Console.WriteLine("Enter 3 Integer Values");
+                int first = Convert.ToInt32(Console.ReadLine());
+                int second = Convert.ToInt32(Console.ReadLine());
+                int third = Convert.ToInt32(Console.ReadLine());
+                var minimum = RefractodMethod<int>.FindMinValues(first, second, third);
+                Console.WriteLine("The minimum Value is: " + minimum);
                 Console.WriteLine("--------------------------------------------");
                 Console.WriteLine("Enter 3 Float Values");
                 float fFirst = float.Parse(Console.ReadLine());
@@ -153,6 +153,7 @@ internal class Program
                 var sMinimum = RefractodMethod<string>.FindMinValues(sFirst, sSecond, sThird);
                 Console.WriteLine("The minimum Value is: " + sMinimum);
                 break;
+            
 
             default:
                 Console.WriteLine("Please choose the any one options");
